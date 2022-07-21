@@ -12,7 +12,7 @@ public class manipulaArquivoCsv {
         List<List<String>> registroDados = csv.leitura();
         csv.imprimeDados(registroDados);
     }
-    public List<List<String>> registroDados = new ArrayList<>();
+    public List<List<String>> registroDados = new ArrayList<>(); 
     try {
         File arquivo = new File("dados/dadosclientes.csv");
         Scanner sc = new Scanner(arquivo);
@@ -25,6 +25,18 @@ public class manipulaArquivoCsv {
         System.exit(0);
     }
     return registroDados;
+}
+
+private List<String> getRegistroDaLinha(String linha) {
+    List<String> listValores = new ArrayList<String>();
+    try (Scanner linhaScanner = new Scanner(linha)) {
+        linhaScanner.useDelimiter(DELIMITADOR_PONTO_VIRGULA);
+        while (linhaScanner.hasNext()) {
+            listValores.add(linhaScanner.next());
+        }
+
+    }
+    return listValores;
 }
 
 private void imprimeDados(List<List<String>> registroDados) {
