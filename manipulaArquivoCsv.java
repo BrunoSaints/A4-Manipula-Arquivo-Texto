@@ -26,3 +26,12 @@ public class manipulaArquivoCsv {
     }
     return registroDados;
 }
+
+private void imprimeDados(List<List<String>> registroDados) {
+    for (List<String> lista : registroDados) {
+        for (String elemento : lista) {
+            System.out.printf("|%15s", elemento);
+        }
+        System.out.println("|");
+    }
+ }
