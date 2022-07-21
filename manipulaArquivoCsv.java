@@ -34,7 +34,6 @@ private List<String> getRegistroDaLinha(String linha) {
         while (linhaScanner.hasNext()) {
             listValores.add(linhaScanner.next());
         }
-
     }
     return listValores;
 }
@@ -48,4 +47,4 @@ private void imprimeDados(List<List<String>> registroDados) {
     }
  }
 
-}
+ 
