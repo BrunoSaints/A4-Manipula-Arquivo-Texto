@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class ManipulaArquivoTexto {
+public class manipulaArquivoTexto {
     public static void main(String[] args) {
         try {
             File arquivo = new File("dados/poema.txt");
